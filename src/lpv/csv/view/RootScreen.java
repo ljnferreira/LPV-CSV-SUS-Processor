@@ -36,7 +36,6 @@ public class RootScreen {
 	}
 
 	private void initialize() {
-		
 		frmAplicativo = new JFrame();
 		frmAplicativo.setTitle("Aplicativo");
 		frmAplicativo.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -45,7 +44,7 @@ public class RootScreen {
 		frmAplicativo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmAplicativo.getContentPane().setLayout(null);
 		
-		JLabel lblNome = new JLabel("Selecione o arquivo .csv que contÃ©m os dados da pesquisa SUS");
+		JLabel lblNome = new JLabel("Selecione o arquivo .csv que contêm os dados da pesquisa SUS");
 		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNome.setBounds(16, 45, 393, 23);
 		frmAplicativo.getContentPane().add(lblNome);
@@ -58,8 +57,7 @@ public class RootScreen {
 				String pathArquivo = abrirArquivos();
 				if(pathArquivo != "") {
 					try {
-						janelaResultados1 newWindow = new janelaResultados1(getSUSFinalGrade(pathArquivo));
-						newWindow.setVisible(true);
+						System.out.println(getSUSFinalGrade(pathArquivo));
 					}catch (Exception exc) {
 						exc.printStackTrace();
 					}
