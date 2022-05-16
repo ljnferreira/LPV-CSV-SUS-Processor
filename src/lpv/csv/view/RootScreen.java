@@ -58,7 +58,7 @@ public class RootScreen {
 				String pathArquivo = abrirArquivos();
 				if(pathArquivo != "") {
 					try {
-						janelaResultados1 newWindow = new janelaResultados1(getSUSFinalGrade(pathArquivo));
+						ShowResult newWindow = new ShowResult(getSUSFinalGrade(pathArquivo));
 						newWindow.setVisible(true);
 					}catch (Exception exc) {
 						exc.printStackTrace();

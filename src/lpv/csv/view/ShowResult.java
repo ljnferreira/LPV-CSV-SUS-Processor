@@ -13,7 +13,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Label;
 
-public class janelaResultados1 extends JDialog {
+public class ShowResult extends JDialog {
 
 	/**
 	 * 
@@ -25,7 +25,7 @@ public class janelaResultados1 extends JDialog {
 	 */
 	public static void main(String[] args, double Double) {
 		try {
-			janelaResultados1 dialog = new janelaResultados1(Double);
+			ShowResult dialog = new ShowResult(Double);
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 			
@@ -37,7 +37,7 @@ public class janelaResultados1 extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public janelaResultados1(Double aux) {
+	public ShowResult(Double aux) {
 		setType(Type.POPUP);
 		setFont(new Font("Tahoma", Font.BOLD, 12));
 		setTitle("Resultados SUS");
