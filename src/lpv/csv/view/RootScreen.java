@@ -38,14 +38,14 @@ public class RootScreen {
 	private void initialize() {
 		
 		frmAplicativo = new JFrame();
-		frmAplicativo.setTitle("Aplicativo");
+		frmAplicativo.setTitle("Calcular SUS");
 		frmAplicativo.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 14));
 		frmAplicativo.setFont(new Font("Dialog", Font.PLAIN, 10));
 		frmAplicativo.setBounds(100, 100, 435, 253);
 		frmAplicativo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmAplicativo.getContentPane().setLayout(null);
 		
-		JLabel lblNome = new JLabel("Selecione o arquivo .csv que contém os dados da pesquisa SUS");
+		JLabel lblNome = new JLabel("Selecione o arquivo .csv que contem os dados da pesquisa SUS");
 		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNome.setBounds(16, 45, 393, 23);
 		frmAplicativo.getContentPane().add(lblNome);

@@ -35,11 +35,8 @@ public class DataController {
 		}
 		
 		for(double avg : averages) {
-			System.out.printf("%g, ", avg);
 			grade += avg;
 		}
-		
-		System.out.println();
 		
 		grade = grade / averages.length;
 		

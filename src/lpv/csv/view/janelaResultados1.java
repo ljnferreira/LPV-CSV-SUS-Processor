@@ -45,13 +45,13 @@ public class janelaResultados1 extends JDialog {
 		int inteiro = (int) Math.round(aux);
 		String nota = converteNota(inteiro);
 		
-		setBounds(100, 100, 435, 281);
+		setBounds(100, 100, 470, 281);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Sair"); //Botão de sair da janela (inferior)
+		JButton btnNewButton = new JButton("Sair"); //Botao de sair da janela (inferior)
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -65,7 +65,7 @@ public class janelaResultados1 extends JDialog {
 		
 		Label notaEncontrada = new Label(nota);
 		notaEncontrada.setFont(new Font("Tahoma", Font.BOLD, 14));
-		notaEncontrada.setBounds(51, 58, 316, 41);
+		notaEncontrada.setBounds(51, 58, 500, 41);
 		contentPanel.add(notaEncontrada);
 		
 		JProgressBar barraDeNota = new JProgressBar();
@@ -74,7 +74,7 @@ public class janelaResultados1 extends JDialog {
 		barraDeNota.setValue(inteiro);
 		contentPanel.add(barraDeNota);
 		
-		Label mediaEncontrada = new Label("A média encontrada foi: ");
+		Label mediaEncontrada = new Label("A media encontrada foi: ");
 		mediaEncontrada.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		mediaEncontrada.setBounds(77, 22, 169, 48);
 		contentPanel.add(mediaEncontrada);
@@ -89,21 +89,21 @@ public class janelaResultados1 extends JDialog {
  public String converteNota(int inteiro) {
  String nota;
  if (inteiro <= 50) {
-    nota = "A média é F, ou seja, INACEITÁVEL | PIOR IMAGINÁVEL";
+    nota = "A media foi F, ou seja, INACEITAVEL | PIOR IMAGINAVEL";
 	}
 	else
 	 	if (inteiro <= 60) {
-	   	nota = "A média é D, ou seja, MARGINAL | OK";
+	   	nota = "A media foi D, ou seja, MARGINAL | OK";
 	   	}
 	   	else
 	   		if (inteiro <= 70) {
-	   		nota = "A média é C, ou seja, MARGINAL | BOM";
+	   		nota = "A media foi C, ou seja, MARGINAL | BOM";
 	   		}
 	   		else
 	   			if (inteiro <= 80)
-	   				nota = "A média é B, ou seja, ACEITÁVEL | EXCELENTE";
+	   				nota = "A media foi B, ou seja, ACEITAVEL | EXCELENTE";
      			else
-     				nota = "A média é A, ou seja, ACEITÁVEL | MELHOR IMAGINÁVEL";
+     				nota = "A media foi A, ou seja, ACEITAVEL | MELHOR IMAGINAVEL";
  return nota;
 
  }
