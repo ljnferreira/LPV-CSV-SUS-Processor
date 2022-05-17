@@ -9,6 +9,15 @@ public class DataController {
 	public static double getSUSFinalGrade(String location) throws Exception{
 		FileReader csv = new FileReader(location);
 		List<String[]> data = readAll(csv);
+		if(data.size() == 0) {
+			return -1;
+		}else {
+			for(String[] item : data) {
+				if(item.length!=10) {
+					return -2;
+				}
+			}
+		}
 		return calculateGrade(data);
 	}
 	
@@ -24,6 +33,9 @@ public class DataController {
 				continue;
 			}
 			for(int index = 0; index < test.length; index++) {
+				if(Double.parseDouble(test[index]) > 5 || Double.parseDouble(test[index]) < 1) {
+					return -3;
+				}
 				if(((index + 1) % 2) == 0) {
 					averages[counter] += 5 - Double.parseDouble(test[index]);
 				}else {
