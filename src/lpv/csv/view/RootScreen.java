@@ -38,10 +38,7 @@ public class RootScreen {
 
 	private void initialize() {
 		
-<<<<<<< HEAD
-=======
-		//Container of application
->>>>>>> 3758432 (feat(calculateSUSAverages): added validations on csv read and changed interface)
+
 		frmAplicativo = new JFrame();
 		frmAplicativo.setTitle("Calcular SUS");
 		frmAplicativo.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -49,11 +46,8 @@ public class RootScreen {
 		frmAplicativo.setBounds(100, 100, 435, 253);
 		frmAplicativo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmAplicativo.getContentPane().setLayout(null);
-		
-<<<<<<< HEAD
-=======
+
 		//widget that displays a text to the user
->>>>>>> 3758432 (feat(calculateSUSAverages): added validations on csv read and changed interface)
 		JLabel lblNome = new JLabel("Selecione o arquivo .csv que contem os dados da pesquisa SUS");
 		lblNome.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNome.setBounds(16, 45, 393, 23);
@@ -71,10 +65,6 @@ public class RootScreen {
 				String pathArquivo = abrirArquivos();
 				if(pathArquivo != "") {
 					try {
-<<<<<<< HEAD
-						ShowResult newWindow = new ShowResult(getSUSFinalGrade(pathArquivo));
-						newWindow.setVisible(true);
-=======
 						double result = getSUSFinalGrade(pathArquivo);
 						if(result >=0) {
 							ShowResult newWindow = new ShowResult(result);
@@ -88,15 +78,13 @@ public class RootScreen {
 								}else {
 									if(result == -3) {
 										JOptionPane.showMessageDialog(frmAplicativo, 
-																"Algum registro foi preenchido incorretamente, favor verificar no arquivo se todos os valores estão entre 1 e 5!",
+																"Algum registro foi preenchido incorretamente, favor verificar no arquivo se todos os valores estï¿½o entre 1 e 5!",
 																"Erro na leitura do arquivo",
 																JOptionPane.ERROR_MESSAGE);
 									}
 								}
 							}
 						}
-						
->>>>>>> 3758432 (feat(calculateSUSAverages): added validations on csv read and changed interface)
 					}catch (Exception exc) {
 						exc.printStackTrace();
 					}
