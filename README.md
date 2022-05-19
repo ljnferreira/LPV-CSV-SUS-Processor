@@ -1,4 +1,4 @@
-# LPV-CSV-SUS-Processos
+# SUS Processor
 
 This program opens a .csv file containing the needed values to calculate the System Usability Scale(SUS) average.
 
