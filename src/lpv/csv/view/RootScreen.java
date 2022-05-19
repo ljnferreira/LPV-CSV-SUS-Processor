@@ -78,7 +78,7 @@ public class RootScreen {
 								}else {
 									if(result == -3) {
 										JOptionPane.showMessageDialog(frmAplicativo, 
-																"Algum registro foi preenchido incorretamente, favor verificar no arquivo se todos os valores est�o entre 1 e 5!",
+																"Algum registro foi preenchido incorretamente, favor verificar no arquivo se todos os valores estao entre 1 e 5!",
 																"Erro na leitura do arquivo",
 																JOptionPane.ERROR_MESSAGE);
 									}
